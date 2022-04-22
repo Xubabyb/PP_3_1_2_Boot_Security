@@ -5,7 +5,7 @@
     <title>New user</title>
 </head>
 <body>
-<form th:method="POST" th:action="@{/users}" th:object="${user}">
+<form th:method="POST" th:action="@{/admin}" th:object="${user}">
 <!--    <p><b>User Id:</b><span th:utext="${user.id}"></span></p>-->
 
     <p><label for="firstName">First name: </label><br>
@@ -22,5 +22,6 @@
 
     <p><input type="submit" value="Create"></p>
 </form>
+<div th:insert="~{exit :: exit_button}"></div>
 </body>
 </html>

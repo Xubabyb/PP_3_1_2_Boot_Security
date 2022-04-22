@@ -66,6 +66,6 @@ public class User implements UserDetails {
     }
 
     public UserDetails fromUser() {
-        return new org.springframework.security.core.userdetails.User(email,password,getAuthorities());
+        return new org.springframework.security.core.userdetails.User(email, password, getAuthorities());
     }
 }

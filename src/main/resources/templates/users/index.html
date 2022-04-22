@@ -7,10 +7,11 @@
 <body>
 
 <div th:each="user:${users}">
-    <span th:text="${user.id}"></span> <a th:href="@{/users/{id}(id=${user.id})}" th:text="${user.email}"></a>
+    <span th:text="${user.id}"></span> <a th:href="@{/admin/{id}(id=${user.id})}" th:text="${user.email}"></a>
 </div>
 <br/>
 <hr/>
-<a href="/users/new">Create new User</a>
+<a th:href="@{/admin/new}">Create new User</a>
+<div th:insert="~{exit :: exit_button}"></div>
 </body>
 </html>
